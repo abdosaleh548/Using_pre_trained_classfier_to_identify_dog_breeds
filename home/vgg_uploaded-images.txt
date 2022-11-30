@@ -1,0 +1,82 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+empty dictinonary results_dic - n items= 0
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                       ball.jpg  label:                           
+ 2 key:                       Lion.jpg  label:                           
+ 3 key:                     Dog_02.jpg  label:                        dog
+ 4 key:                     Dog_01.jpg  label:                        dog
+{'ball.jpg': ['', 'soccer ball', 1], 'Lion.jpg': [''], 'Dog_02.jpg': ['dog'], 'Dog_01.jpg': ['dog']}
+{'ball.jpg': ['', 'soccer ball', 1], 'Lion.jpg': ['', 'lion, king of beasts, Panthera leo', 1], 'Dog_02.jpg': ['dog'], 'Dog_01.jpg': ['dog']}
+{'ball.jpg': ['', 'soccer ball', 1], 'Lion.jpg': ['', 'lion, king of beasts, Panthera leo', 1], 'Dog_02.jpg': ['dog', 'boxer', 0], 'Dog_01.jpg': ['dog']}
+{'ball.jpg': ['', 'soccer ball', 1], 'Lion.jpg': ['', 'lion, king of beasts, Panthera leo', 1], 'Dog_02.jpg': ['dog', 'boxer', 0], 'Dog_01.jpg': ['dog', 'American Staffordshire terrier, Staffordshire terrier, American pit bull terrier, pit bull terrier', 0]}
+
+     MATCH:
+
+                      ball.jpg: 
+Real:                              Classifier:                    soccer ball
+
+                      Lion.jpg: 
+Real:                              Classifier: lion, king of beasts, Panthera leo
+
+ NOT A MATCH:
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:                          boxer
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier: American Staffordshire terrier, Staffordshire terrier, American pit bull terrier, pit bull terrier
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+     MATCH:
+
+                      ball.jpg: 
+Real:                              Classifier:                    soccer ball  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                      Lion.jpg: 
+Real:                              Classifier: lion, king of beasts, Panthera leo  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:                          boxer  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier: American Staffordshire terrier, Staffordshire terrier, American pit bull terrier, pit bull terrier  
+PetLabelDog: 0  ClassLabelDog: 1
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  1  N NotDog Images:  3 
+Pct Corr dog: 100.0 Pct Corr NOTdog:  66.7  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  1  N NotDog Images:  3 
+Pct Corr dog: 100.0 Pct Corr NOTdog:  66.7  Pct Corr Breed:   0.0
+
+
+*** Results Summary for CNN Model Architecture VGG ***
+N Images            :   4
+N Dog Images        :   1
+pct_match: 50.0
+pct_correct_dogs: 100.0
+pct_correct_breed: 0.0
+pct_correct_notdogs: 66.66666666666666
+
+INCORRECT Dog/NOT Dog Assignments:
+Real:                        dog   Classifier: American Staffordshire terrier, Staffordshire terrier, American pit bull terrier, pit bull terrier
+
+INCORRECT Dog Breed Assignment:
+Real:                        dog   Classifier:                          boxer
+
+** Total Elapsed Runtime: 0:0:3
